@@ -14,7 +14,6 @@ struct Namespace;
 typedef struct Namespace Namespace;
 
 // A very small container structure that owns/organizes one or more namespaces.
-// Implementation details are left to the .c file; expose only what main.c needs.
 typedef struct Container Container;
 
 // Create/destroy a container instance.

@@ -18,7 +18,7 @@ typedef struct Namespace {
 	char *rootfs;    // Path to root filesystem to chroot/pivot_root into
 	char *command;   // Entrypoint/command to exec inside the namespace
 	char *hostname;  // UTS namespace hostname
-    Namespace *next; // Pointer to next namespace in a linked list
+    struct Namespace *next; // Pointer to next namespace in a linked list
 	// Optional runtime metadata (not required by main.c but useful to have)
 	pid_t pid;       // Child/leader pid in this namespace (if applicable)
 	int clone_flags; // CLONE_* flags used to create this namespace set

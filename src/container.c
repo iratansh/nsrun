@@ -1,4 +1,5 @@
 #include "container.h"
+#include "namespace.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -14,7 +15,10 @@ Container *create_container(void) {
     if (!container) {
         return NULL;
     }
-    // Initialize container fields
+
+    container->head = NULL;
+    container->tail = NULL;
+    container->size = 0;
     return container;
 }
 
@@ -59,8 +63,7 @@ void destroy_container(Container *container) {
     Namespace *current = container->head;
     while (current) {
         Namespace *next = current->next;
-        free(current->name);
-        free(current);
+        destroy_namespace(current);
         current = next;
     }
     free(container);

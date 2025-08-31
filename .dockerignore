@@ -1,0 +1,11 @@
+# Ignore compiled objects and binaries
+*.o
+nsrun
+
+# Ignore git and IDE files
+.git
+.vscode
+.DS_Store
+
+# Ignore any existing rootfs to use fresh one
+rootfs/

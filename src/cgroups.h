@@ -9,8 +9,7 @@ extern "C" {
 
 #include <stddef.h>
 
-// Generic cgroup v1/v2 limits supported by this minimal header. The .c can
-// decide how to map these into the actual filesystem and controllers.
+// Generic cgroup v1/v2 limits supported by this minimal header.
 typedef struct CgroupLimits {
 	// Memory: bytes; 0 means unlimited/not set
 	unsigned long long memory_limit_bytes;

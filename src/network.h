@@ -11,7 +11,6 @@ extern "C" {
 #include <sys/types.h>
 
 // High-level API to set up a veth pair and a simple bridge for a container
-// network namespace. Actual implementation details reside in network.c.
 
 // Create a veth pair (host_if, cont_if). Returns 0 on success.
 int net_create_veth_pair(const char *host_if, const char *cont_if);
